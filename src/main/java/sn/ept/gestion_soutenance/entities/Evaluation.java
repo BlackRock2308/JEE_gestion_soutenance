@@ -91,4 +91,15 @@ public class Evaluation implements Serializable {
     public int hashCode() {
         return Objects.hash(evaluationPk, evaluateur, memoire, elementCompetence, note, commentaire);
     }
+
+    @Override
+    public String toString() {
+        return "Evaluation{" +
+                "evaluateur=" + evaluateur +
+                ", memoire=" + memoire +
+                ", elementCompetence=" + elementCompetence +
+                ", note=" + note +
+                ", commentaire='" + commentaire + '\'' +
+                '}';
+    }
 }

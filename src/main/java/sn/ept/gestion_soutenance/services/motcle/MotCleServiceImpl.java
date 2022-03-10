@@ -1,34 +1,35 @@
 package sn.ept.gestion_soutenance.services.motcle;
 
+import sn.ept.gestion_soutenance.dao.mot_cle.IMotCleDAO;
+import sn.ept.gestion_soutenance.dao.mot_cle.MotCleDaoImpl;
 import sn.ept.gestion_soutenance.entities.MotCle;
 
 import java.util.List;
 
 public class MotCleServiceImpl implements IMotCleService{
 
-    private IMotCleService motCleService;
+    private IMotCleDAO motCleDAO = new MotCleDaoImpl();
 
-    public MotCleServiceImpl() {
-        motCleService = new MotCleServiceImpl();
+    public IMotCleDAO getMotCleDAO() {
+        return motCleDAO;
     }
 
     @Override
     public List<MotCle> listMotCle() {
-        return motCleService.listMotCle();
+        return motCleDAO.listMotCles();
     }
 
     @Override
     public void addMotCle(MotCle motCle) {
-        motCleService.addMotCle(motCle);
+        motCleDAO.save(motCle);
     }
 
     @Override
     public void removeMotCle(Long Id) {
-        motCleService.removeMotCle(Id);
+        motCleDAO.remove(Id);
     }
 
     @Override
     public MotCle findOne(Long id) {
-        return motCleService.findOne(id);
-    }
+        return motCleDAO.findOne(id);}
 }

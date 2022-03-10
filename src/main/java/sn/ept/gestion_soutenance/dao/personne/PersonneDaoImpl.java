@@ -15,10 +15,9 @@ public class PersonneDaoImpl implements IPersonneDAO {
 
     @Override
     public List<Personne> listPersonnes() {
-        EntityManager em = DbConfig.getInstance().getEm();
-
         Query q = em.createNamedQuery("Personne.findAll");
-        return q.getResultList();
+        return (List<Personne>) q.getResultList();
+
     }
 
     @Override
@@ -29,20 +28,20 @@ public class PersonneDaoImpl implements IPersonneDAO {
     }
 
     @Override
-    public Personne findOne(Long Id) {
+    public Personne findOne(Integer Id) {
         Personne response = (Personne) em.find(Personne.class,Id);
 
         return response;
     }
 
     @Override
-    public void remove(Long Id) {
+    public void remove(Integer Id) {
         Personne p =em.find(Personne.class,Id);
         em.remove(p);
     }
 
     @Override
-    public void update(Long Id) {
+    public void update(Integer Id) {
 
     }
 }

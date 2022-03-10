@@ -8,10 +8,10 @@ import java.util.List;
 
 public class MemoireService implements IMemoireService{
 
-    private IMemoireDAO memoireDAO;
+    private IMemoireDAO memoireDAO = new MemoireDaoImpl();
 
-    public MemoireService() {
-        memoireDAO = new MemoireDaoImpl();
+    public IMemoireDAO getMemoireDAO() {
+        return memoireDAO;
     }
 
     @Override

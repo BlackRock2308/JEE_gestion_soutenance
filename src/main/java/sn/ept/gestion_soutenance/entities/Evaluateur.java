@@ -78,4 +78,14 @@ public class Evaluateur extends Personne {
     public int hashCode() {
         return Objects.hash(super.hashCode(), fonction, role, titre, memoire, institut);
     }
+
+    @Override
+    public String toString() {
+        return "Evaluateur{" +
+                "fonction='" + fonction + '\'' +
+                ", role='" + role + '\'' +
+                ", titre='" + titre + '\'' +
+                ", institut=" + institut +
+                '}';
+    }
 }

@@ -1,7 +1,6 @@
 package sn.ept.gestion_soutenance.dao.resume;
 
 import sn.ept.gestion_soutenance.config.DbConfig;
-import sn.ept.gestion_soutenance.entities.Personne;
 import sn.ept.gestion_soutenance.entities.Resume;
 
 import javax.persistence.EntityManager;
@@ -12,11 +11,10 @@ import java.util.List;
 public class ResumeDaoImpl implements IResumeDAO{
 
     @PersistenceContext
-    private EntityManager em;
+    private EntityManager em = DbConfig.getInstance().getEm();
 
     @Override
     public List<Resume> listResumes() {
-        EntityManager em = DbConfig.getInstance().getEm();
 
         Query q = em.createNamedQuery("Resume.findAll");
         return q.getResultList();

@@ -8,9 +8,9 @@ public interface IPersonneService {
 
     public List<Personne> listPersonnes();
 
-    public void addPersonne(Personne personne);
+    public Personne addPersonne(Personne personne);
 
-    public void removePersonne(Long Id);
+    public void removePersonne(Integer Id);
 
-    public Personne findOne(Long id);
+    public Personne findOne(Integer id);
 }

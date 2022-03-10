@@ -11,12 +11,10 @@ import java.util.List;
 public class InstitutDaoImpl implements IInstitutDAO{
 
     @PersistenceContext
-    private EntityManager em;
+    private EntityManager em = DbConfig.getInstance().getEm();;
 
     @Override
     public List<Institut> listInstituts() {
-
-        EntityManager em = DbConfig.getInstance().getEm();
 
         Query q = em.createNamedQuery("Institut.findAll");
         return q.getResultList();

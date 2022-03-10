@@ -1,10 +1,7 @@
 package sn.ept.gestion_soutenance.dao.memoire;
 
 import sn.ept.gestion_soutenance.config.DbConfig;
-import sn.ept.gestion_soutenance.entities.Evaluation;
 import sn.ept.gestion_soutenance.entities.Memoire;
-import sn.ept.gestion_soutenance.entities.Personne;
-import sn.ept.gestion_soutenance.entities.Resume;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -14,12 +11,10 @@ import java.util.List;
 public class MemoireDaoImpl implements IMemoireDAO {
 
     @PersistenceContext
-    private EntityManager em;
+    private EntityManager em = DbConfig.getInstance().getEm();
 
     @Override
     public List<Memoire> listMemoires() {
-
-        EntityManager em = DbConfig.getInstance().getEm();
 
         Query q = em.createNamedQuery("Memoire.findAll");
         return q.getResultList();

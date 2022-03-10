@@ -57,4 +57,6 @@ public class Resume implements Serializable {
     public int hashCode() {
         return Objects.hash(resumePK, resume, memoire);
     }
+
+
 }

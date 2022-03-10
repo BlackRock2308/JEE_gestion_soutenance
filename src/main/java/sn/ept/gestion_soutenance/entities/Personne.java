@@ -153,4 +153,13 @@ public class Personne implements Serializable {
     public int hashCode() {
         return Objects.hash(id, nom, prenom, dateNaissance, lieuNaissance, emailPro, emailPerso, dateEnregistrement, age, memoire);
     }
+
+    @Override
+    public String toString() {
+        return "Personne{" +
+                "nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", emailPro='" + emailPro + '\'' +
+                '}';
+    }
 }

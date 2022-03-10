@@ -8,11 +8,12 @@ import java.util.List;
 
 public class InstitutServiceImpl implements IInstitutService{
 
-    private IInstitutDAO institutDAO;
+    private IInstitutDAO institutDAO = new InstitutDaoImpl();
 
-    public InstitutServiceImpl(){
-        institutDAO = new InstitutDaoImpl();
+    public IInstitutDAO getInstitutDAO() {
+        return institutDAO;
     }
+
     @Override
     public List<Institut> listInstituts() {
         return institutDAO.listInstituts();

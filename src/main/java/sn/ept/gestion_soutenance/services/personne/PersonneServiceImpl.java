@@ -18,22 +18,23 @@ public class PersonneServiceImpl implements IPersonneService{
     @Override
     public List<Personne> listPersonnes() {
         List<Personne> personnes = personneDAO.listPersonnes();
+
         return personnes;
     }
 
     @Override
-    public void addPersonne(Personne personne) {
+    public Personne addPersonne(Personne personne) {
 
-        personneDAO.save(personne);
+       return personneDAO.save(personne);
     }
 
     @Override
-    public void removePersonne(Long Id) {
+    public void removePersonne(Integer Id) {
         personneDAO.remove(Id);
     }
 
     @Override
-    public Personne findOne(Long id) {
+    public Personne findOne(Integer id) {
         return personneDAO.findOne(id);
     }
 }

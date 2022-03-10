@@ -8,10 +8,10 @@ import java.util.List;
 
 public class ResumeServiceImpl implements IResumeService{
 
-    private IResumeDAO resumeDAO;
+    private IResumeDAO resumeDAO = new ResumeDaoImpl();
 
-    public ResumeServiceImpl() {
-        resumeDAO = new ResumeDaoImpl();
+    public IResumeDAO getResumeDAO() {
+        return resumeDAO;
     }
 
     @Override

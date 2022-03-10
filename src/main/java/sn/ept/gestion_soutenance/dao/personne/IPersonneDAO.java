@@ -10,11 +10,11 @@ public interface IPersonneDAO {
 
     public Personne save(Personne personne);
 
-    public Personne findOne(Long Id);
+    public Personne findOne(Integer Id);
 
-    public void remove(Long Id);
+    public void remove(Integer Id);
 
-    public void update(Long Id);
+    public void update(Integer Id);
 
 
 

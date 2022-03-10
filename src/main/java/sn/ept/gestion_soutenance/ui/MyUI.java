@@ -1,6 +1,7 @@
-package sn.ept.gestion_soutenance.entities;
+package sn.ept.gestion_soutenance.ui;
 
 import sn.ept.gestion_soutenance.config.DbConfig;
+import sn.ept.gestion_soutenance.entities.Personne;
 import sn.ept.gestion_soutenance.services.personne.IPersonneService;
 import sn.ept.gestion_soutenance.services.personne.PersonneServiceImpl;
 
@@ -8,18 +9,14 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import java.util.List;
 
-public class TestConfig {
+public class MyUI {
 
     private static IPersonneService personneService = new PersonneServiceImpl();
-
 
     public static void main(String[] args) {
 
         EntityManager em = DbConfig.getInstance().getEm();
 
-
-        
-        System.out.println("Adding a new Personne");
 
         Personne p1 = new Personne("BALDE", "Aissatou", "baissatou@ept.sn");
 
@@ -41,7 +38,6 @@ public class TestConfig {
 
         tx.commit();
         em.close();
- 
- 
+
     }
 }

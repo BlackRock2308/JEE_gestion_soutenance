@@ -1,12 +1,13 @@
 package sn.ept.gestion_soutenance.entities;
 
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.MapsId;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
+
+@NamedQueries({
+        @NamedQuery(name = "MotCle.findAll", query = "SELECT e FROM MotCle e")
+})
 @Entity
 public class MotCle implements Serializable {
 

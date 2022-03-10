@@ -11,12 +11,10 @@ import java.util.List;
 public class EvaluationDaoImpl implements IEvaluationDAO{
 
     @PersistenceContext
-    private EntityManager em;
+    private EntityManager em = DbConfig.getInstance().getEm();;
 
     @Override
     public List<Evaluation> listEvaluations() {
-
-        EntityManager em = DbConfig.getInstance().getEm();
 
         Query q = em.createNamedQuery("Evaluation.findAll");
         return q.getResultList();

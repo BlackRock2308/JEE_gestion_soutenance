@@ -2,6 +2,7 @@ package sn.ept.gestion_soutenance.dao.element_comptence;
 
 import sn.ept.gestion_soutenance.config.DbConfig;
 import sn.ept.gestion_soutenance.entities.ElementCompetence;
+import sn.ept.gestion_soutenance.entities.Evaluateur;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -33,5 +34,12 @@ public class ElementComptenceDaoImpl implements IElementCompetenceDAO{
         ElementCompetence e = em.find(ElementCompetence.class,id);
         em.remove(e);
 
+    }
+
+    @Override
+    public ElementCompetence findOne(Long Id) {
+        ElementCompetence response = (ElementCompetence) em.find(ElementCompetence.class,Id);
+
+        return response;
     }
 }

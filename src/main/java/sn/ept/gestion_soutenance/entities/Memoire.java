@@ -105,4 +105,15 @@ public class Memoire implements Serializable {
         result = 31 * result + Arrays.hashCode(pdf);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Memoire{" +
+                "sujet='" + sujet + '\'' +
+                ", langue='" + langue + '\'' +
+                ", dateSoutenance=" + dateSoutenance +
+                ", lieu='" + lieu + '\'' +
+                ", etudiant=" + etudiant +
+                '}';
+    }
 }

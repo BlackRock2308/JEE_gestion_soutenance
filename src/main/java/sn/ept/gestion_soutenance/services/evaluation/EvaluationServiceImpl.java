@@ -8,11 +8,12 @@ import java.util.List;
 
 public class EvaluationServiceImpl implements IEvaluationService{
 
-    private IEvaluationDAO evaluationDAO;
+    private IEvaluationDAO evaluationDAO = new EvaluationDaoImpl();
 
-    public EvaluationServiceImpl(){
-        evaluationDAO = new EvaluationDaoImpl();
+    public IEvaluationDAO getEvaluationDAO() {
+        return evaluationDAO;
     }
+
     @Override
     public List<Evaluation> listEvaluations() {
         return evaluationDAO.listEvaluations();

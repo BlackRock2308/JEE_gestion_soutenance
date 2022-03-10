@@ -55,4 +55,12 @@ public class ElementCompetence implements Serializable {
     public int hashCode() {
         return Objects.hash(id, nom, coeficient);
     }
+
+    @Override
+    public String toString() {
+        return "ElementCompetence{" +
+                "nom='" + nom + '\'' +
+                ", coeficient=" + coeficient +
+                '}';
+    }
 }
