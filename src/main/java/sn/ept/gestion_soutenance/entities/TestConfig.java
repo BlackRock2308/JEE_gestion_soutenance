@@ -10,17 +10,20 @@ public class TestConfig {
     public static void main(String[] args) {
 
         EntityManager em = DbConfig.getInstance().getEm();
-/**
-     Personne p1 = new Personne("BALDE", "Aissatou", "baissatou@ept.sn");
+        
+        
+        System.out.println("Adding a new Personne");
 
-     EntityTransaction tx = em.getTransaction();
-     tx.begin();
+        Personne p1 = new Personne("BALDE", "Aissatou", "baissatou@ept.sn");
 
-     em.persist(p1);
+        EntityTransaction tx = em.getTransaction();
+        tx.begin();
 
-     tx.commit();
-     em.close();
- **/
+        em.persist(p1);
 
+        tx.commit();
+        em.close();
+ 
+ 
     }
 }

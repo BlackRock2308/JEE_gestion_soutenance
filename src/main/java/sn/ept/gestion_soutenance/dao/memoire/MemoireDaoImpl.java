@@ -3,6 +3,8 @@ package sn.ept.gestion_soutenance.dao.memoire;
 import sn.ept.gestion_soutenance.config.DbConfig;
 import sn.ept.gestion_soutenance.entities.Evaluation;
 import sn.ept.gestion_soutenance.entities.Memoire;
+import sn.ept.gestion_soutenance.entities.Personne;
+import sn.ept.gestion_soutenance.entities.Resume;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -29,4 +31,20 @@ public class MemoireDaoImpl implements IMemoireDAO {
 
         return memoire;
     }
+
+    @Override
+    public Memoire findOne(Long Id) {
+        Memoire response = (Memoire) em.find(Memoire.class,Id);
+
+        return response;
+    }
+
+    @Override
+    public void remove(Long Id) {
+
+        Memoire m =em.find(Memoire.class,Id);
+        em.remove(m);
+
+    }
+
 }

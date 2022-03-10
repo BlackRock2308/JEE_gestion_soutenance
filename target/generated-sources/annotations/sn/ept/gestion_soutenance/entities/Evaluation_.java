@@ -8,7 +8,7 @@ import sn.ept.gestion_soutenance.entities.Evaluateur;
 import sn.ept.gestion_soutenance.entities.EvaluationPk;
 import sn.ept.gestion_soutenance.entities.Memoire;
 
-@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2022-03-08T21:29:18", comments="EclipseLink-2.7.9.v20210604-rNA")
+@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2022-03-10T00:04:53", comments="EclipseLink-2.7.9.v20210604-rNA")
 @StaticMetamodel(Evaluation.class)
 public class Evaluation_ { 
 

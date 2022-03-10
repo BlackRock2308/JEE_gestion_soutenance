@@ -10,4 +10,8 @@ public interface IEvaluationDAO {
 
     public Evaluation save(Evaluation evaluation);
 
+    public Evaluation findOne(Long Id);
+
+    public void remove(Long Id);
+
 }

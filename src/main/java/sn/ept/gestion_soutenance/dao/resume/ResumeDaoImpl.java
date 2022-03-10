@@ -24,6 +24,7 @@ public class ResumeDaoImpl implements IResumeDAO{
 
     @Override
     public Resume save(Resume Resume) {
+
         em.persist(Resume);
 
         return Resume;
@@ -39,7 +40,8 @@ public class ResumeDaoImpl implements IResumeDAO{
     @Override
     public void remove(Long Id) {
 
-        em.remove(Id);
+        Resume r =em.find(Resume.class,Id);
+        em.remove(r);
 
     }
 

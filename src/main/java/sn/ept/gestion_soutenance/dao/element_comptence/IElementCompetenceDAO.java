@@ -9,4 +9,6 @@ public interface IElementCompetenceDAO {
     public List<ElementCompetence> listElementCompetences();
 
     public ElementCompetence save(ElementCompetence elementCompetence);
+
+    public void remove(long id);
 }

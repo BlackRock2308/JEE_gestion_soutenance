@@ -10,4 +10,8 @@ public interface IInstitutDAO {
     public List<Institut> listInstituts();
 
     public Institut save(Institut institut);
+
+    public Institut findOne(Long Id);
+
+    public void remove(Long Id);
 }

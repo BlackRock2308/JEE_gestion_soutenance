@@ -6,7 +6,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 import sn.ept.gestion_soutenance.entities.MotClePk;
 import sn.ept.gestion_soutenance.entities.Resume;
 
-@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2022-03-08T21:29:18", comments="EclipseLink-2.7.9.v20210604-rNA")
+@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2022-03-10T00:04:53", comments="EclipseLink-2.7.9.v20210604-rNA")
 @StaticMetamodel(MotCle.class)
 public class MotCle_ { 
 

@@ -28,4 +28,17 @@ public class EvaluationDaoImpl implements IEvaluationDAO{
 
         return evaluation;
     }
+
+    @Override
+    public Evaluation findOne(Long Id) {
+        Evaluation response = (Evaluation) em.find(Evaluation.class,Id);
+
+        return response;
+    }
+
+    @Override
+    public void remove(Long Id) {
+        Evaluation e =em.find(Evaluation.class,Id);
+        em.remove(e);
+    }
 }

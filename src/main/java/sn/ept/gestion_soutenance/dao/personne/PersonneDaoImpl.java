@@ -1,7 +1,6 @@
 package sn.ept.gestion_soutenance.dao.personne;
 
 import sn.ept.gestion_soutenance.config.DbConfig;
-import sn.ept.gestion_soutenance.dao.personne.IPersonneDAO;
 import sn.ept.gestion_soutenance.entities.Personne;
 
 import javax.persistence.EntityManager;
@@ -38,7 +37,8 @@ public class PersonneDaoImpl implements IPersonneDAO {
 
     @Override
     public void remove(Long Id) {
-
+        Personne p =em.find(Personne.class,Id);
+        em.remove(p);
     }
 
     @Override

@@ -23,6 +23,21 @@ public class EvaluateurDaoImpl implements IEvaluateurDAO{
 
     @Override
     public Evaluateur save(Evaluateur evaluateur) {
-        return null;
+      em.persist(evaluateur);
+
+      return evaluateur;
+    }
+
+    @Override
+    public Evaluateur findOne(Long Id) {
+        Evaluateur response = (Evaluateur) em.find(Evaluateur.class,Id);
+
+        return response;
+    }
+
+    @Override
+    public void remove(Long Id) {
+        Evaluateur p =em.find(Evaluateur.class,Id);
+        em.remove(p);
     }
 }
