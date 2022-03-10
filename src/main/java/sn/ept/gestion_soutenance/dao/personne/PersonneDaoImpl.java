@@ -11,7 +11,7 @@ import java.util.List;
 public class PersonneDaoImpl implements IPersonneDAO {
 
     @PersistenceContext
-    private EntityManager em;
+    private EntityManager em = DbConfig.getInstance().getEm();
 
     @Override
     public List<Personne> listPersonnes() {

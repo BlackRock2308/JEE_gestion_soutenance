@@ -8,10 +8,11 @@ import java.util.List;
 
 public class PersonneServiceImpl implements IPersonneService{
 
-    private IPersonneDAO personneDAO;
+    private IPersonneDAO personneDAO = new PersonneDaoImpl();
 
-    public PersonneServiceImpl() {
-        personneDAO = new PersonneDaoImpl();
+
+    public IPersonneDAO getPersonneDAO() {
+        return personneDAO;
     }
 
     @Override

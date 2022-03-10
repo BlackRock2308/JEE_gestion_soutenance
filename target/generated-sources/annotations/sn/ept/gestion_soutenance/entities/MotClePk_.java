@@ -5,7 +5,7 @@ import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 import sn.ept.gestion_soutenance.entities.ResumePk;
 
-@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2022-03-10T00:04:53", comments="EclipseLink-2.7.9.v20210604-rNA")
+@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2022-03-10T10:18:02", comments="EclipseLink-2.7.9.v20210604-rNA")
 @StaticMetamodel(MotClePk.class)
 public class MotClePk_ { 
 
